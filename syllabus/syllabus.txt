@@ -1,0 +1,465 @@
+BACKEND INTERNSHIP PREP — PHASE 0
+MODULE → TOPIC BREAKDOWN
+
+MODULE 1 — CORE JAVA
+
+1.1 OOP Fundamentals
+- Classes
+- Objects
+- Fields
+- Constructors
+- Methods
+- Encapsulation
+- Private fields
+- Getters
+- Immutability
+- this keyword
+- toString()
+
+1.2 Inheritance
+- Parent and child classes
+- extends
+- Abstract classes
+- abstract methods
+- super
+- Method overriding
+- "is-a" relationship
+
+1.3 Interfaces
+- Interface definition
+- Interface methods
+- implements
+- Multiple interfaces
+- Capability vs identity
+- Interface vs inheritance
+
+1.4 Polymorphism
+- Runtime polymorphism
+- Parent reference → child object
+- Method overriding
+- Polymorphic collections
+
+1.5 Collections
+- List
+- ArrayList
+- Set
+- HashSet
+- Map
+- HashMap
+- Key-value pairs
+- Duplicate handling
+- Indexed access
+- Map<K, List<V>>
+- Grouping data
+
+1.6 Exception Handling
+- Exceptions
+- Checked exceptions
+- Unchecked exceptions
+- Exception
+- RuntimeException
+- Custom exceptions
+- throw
+- throws
+- try
+- catch
+- Exception handling strategy
+
+1.7 Streams & Lambdas
+- Lambda expressions
+- Stream API
+- filter()
+- map()
+- sorted()
+- collect()
+- Collectors.toList()
+- Collectors.toSet()
+- Collectors.joining()
+- min()
+- count()
+- Declarative vs imperative programming
+
+1.8 equals() & hashCode()
+- Object equality
+- Overriding equals()
+- Overriding hashCode()
+- HashMap internals concept
+- HashSet behavior
+- Hash buckets
+- Equality contract
+- Why equals() and hashCode() must be overridden together
+
+
+MODULE 2 — BUILD TOOLING: MAVEN
+
+2.1 Maven Fundamentals
+- What Maven does
+- Dependency management
+- Compilation
+- Testing
+- Packaging
+- Project consistency
+
+2.2 pom.xml
+- groupId
+- artifactId
+- version
+- packaging
+- properties
+- Java version
+- dependencies
+- Dependency configuration
+
+2.3 Maven Build Lifecycle
+- validate
+- compile
+- test
+- package
+- verify
+- install
+- deploy
+- Maven phase dependencies
+- mvn package
+- mvn clean
+- target/
+- JAR generation
+
+2.4 Dependency Scopes
+- compile
+- provided
+- test
+- runtime
+
+2.5 Dependency Management
+- Direct dependencies
+- Transitive dependencies
+- mvn dependency:tree
+
+
+MODULE 3 — GIT FUNDAMENTALS
+
+3.1 Git Mental Model
+- Git snapshots
+- Commits
+- Parent commits
+- Branches
+- Branch pointers
+
+3.2 Daily Git Workflow
+- git clone
+- git checkout -b
+- Working tree
+- git add
+- git commit
+- git push
+- Remote repositories
+- Pull Requests
+
+3.3 Good Commit Practices
+- Good commit messages
+- Explain why, not only what changed
+- Meaningful commits
+
+3.4 Merge Conflicts
+- Why conflicts happen
+- Conflict markers
+- HEAD
+- Incoming branch
+- Reading both versions
+- Combining changes
+- Resolving conflicts
+- git add
+- git commit
+- Running tests after conflict resolution
+
+3.5 Merge vs Rebase
+
+Merge:
+- Preserves branch history
+- Creates merge commit
+
+Rebase:
+- Replays commits
+- Produces linear history
+- Rewrites commit hashes
+- Never rebase shared branches
+
+
+MODULE 4 — HTTP FUNDAMENTALS
+
+4.1 HTTP Request
+- HTTP method
+- URL/path
+- HTTP version
+- Headers
+- Request body
+- Content-Type
+- Authorization
+
+4.2 HTTP Response
+- Status line
+- Response headers
+- Response body
+- Location
+
+4.3 HTTP Methods
+
+GET
+- Retrieve resource
+- No side effects
+- Idempotent
+
+POST
+- Create resource
+- Trigger action
+- Not idempotent
+
+PUT
+- Replace resource
+- Idempotent
+
+PATCH
+- Partially update resource
+- Not necessarily idempotent
+
+DELETE
+- Delete resource
+- Idempotent
+
+4.4 Idempotency
+- Meaning of idempotent operation
+- Why retries matter
+- GET vs POST
+- PUT/DELETE behavior
+- Connection to idempotency-key concepts
+
+4.5 HTTP Status Codes
+
+Success:
+- 200 OK
+- 201 Created
+- 204 No Content
+
+Client Errors:
+- 400 Bad Request
+- 401 Unauthorized
+- 403 Forbidden
+- 404 Not Found
+- 409 Conflict
+
+Server Error:
+- 500 Internal Server Error
+
+4.6 API Testing
+- curl
+- Postman
+- Reading status codes
+- Sending JSON requests
+
+
+MODULE 5 — RELATIONAL DATABASE BASICS
+
+5.1 Database Fundamentals
+- Tables
+- Rows
+- Columns
+- Primary keys
+- Foreign keys
+- Relationships
+
+5.2 Database Schema
+- Customers
+- Orders
+- Order items
+- Table relationships
+
+5.3 SQL Queries
+- SELECT
+- WHERE
+- JOIN
+- GROUP BY
+- Aggregation
+- SUM()
+- LEFT JOIN
+- IS NULL
+
+5.4 JOINs
+
+INNER JOIN
+- Matching records only
+
+LEFT JOIN
+- All records from left table
+- Matching records from right table
+- NULL when no match exists
+
+5.5 Database Writes
+- INSERT
+- UPDATE
+- DELETE
+- WHERE clause safety
+- Verifying affected rows before modifying data
+
+5.6 Indexes
+- What an index is
+- Full table scan
+- Indexed lookup
+- Index creation
+- Read performance
+- Write-performance trade-off
+- Storage overhead
+
+5.7 Query Performance
+- EXPLAIN
+- EXPLAIN ANALYZE
+- Comparing query plans
+- Understanding index impact
+
+
+MODULE 6 — IDE SETUP + FIRST SPRING BOOT APPLICATION
+
+6.1 Spring Boot Project Setup
+- Spring Initializr
+- Maven project
+- Java
+- Spring Boot
+- Spring Web dependency
+- Project generation
+- IDE setup
+
+6.2 Spring Boot Project Structure
+- src/main/java
+- src/main/resources
+- application.properties
+- pom.xml
+
+6.3 Spring Boot Entry Point
+- @SpringBootApplication
+- SpringApplication.run()
+- Main application class
+
+6.4 @SpringBootApplication
+- @Configuration
+- @EnableAutoConfiguration
+- @ComponentScan
+
+6.5 REST Controller
+- @RestController
+- Controller classes
+- Endpoint methods
+- @GetMapping
+
+6.6 Creating Endpoints
+- GET /hello
+- Returning responses
+- Running the application
+- Testing through browser
+- Testing through curl
+
+6.7 Embedded Tomcat
+- Spring Boot embedded server
+- Default port 8080
+- localhost
+- Server startup
+
+6.8 Application Configuration
+- application.properties
+- server.port
+- Changing application port
+- Why multiple services need different ports
+
+6.9 Path Variables
+- @PathVariable
+- Dynamic URLs
+- GET /hello/{name}
+
+
+LEARNING ORDER
+
+MODULE 1
+Core Java
+↓
+OOP
+↓
+Collections
+↓
+Exceptions
+↓
+Streams
+↓
+equals/hashCode
+↓
+MODULE 2
+Maven
+↓
+Project + Dependencies + Build
+↓
+MODULE 3
+Git
+↓
+Team Development Workflow
+↓
+MODULE 4
+HTTP
+↓
+How APIs Communicate
+↓
+MODULE 5
+SQL
+↓
+How Backend Stores/Retrieves Data
+↓
+MODULE 6
+Spring Boot
+↓
+Application
+↓
+Controllers
+↓
+Endpoints
+↓
+Configuration
+↓
+PHASE 1
+Spring Boot Foundations
+
+
+PRIORITY FOR BACKEND INTERNSHIP
+
+VERY HIGH
+- Core Java
+- Spring Boot
+- SQL
+
+HIGH
+- HTTP
+
+MEDIUM
+- Git
+- Maven
+
+
+BACKEND SKILL CONNECTION
+
+Java
+→ Write backend logic
+
+Maven
+→ Manage and build Java projects
+
+Git
+→ Work with a development team
+
+HTTP
+→ Understand APIs and communication
+
+SQL
+→ Store and retrieve backend data
+
+Spring Boot
+→ Build the actual backend application
+
+
+PHASE 0 SUMMARY
+
+Java → Maven → Git → HTTP → SQL → Spring Boot
